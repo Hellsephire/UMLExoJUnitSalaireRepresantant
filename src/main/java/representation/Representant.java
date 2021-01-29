@@ -8,11 +8,11 @@ public class Representant {
 	private String adresse;
 	private float salaireFixe;
         private String secteur;
-	public Representant(int numero, String nom, String prenom, String secteur) {
+	public Representant(int numero, String nom, String prenom, ZoneGeographique secteur) {
 		this.numero = numero;
 		this.nom = nom;
 		this.prenom = prenom;
-                this.secteur = secteur;
+                this.secteur = secteur.ZoneGeographique;
 	}
 
 	public int getNumero() {
@@ -43,19 +43,15 @@ public class Representant {
 		this.salaireFixe = salaireFixe;
 	}
 
-	public String getSecteur() {
+	public ZoneGeographique getSecteur() {
 // TODO: Implémenter cette méthode
                 return secteur ;
-		throw new UnsupportedOperationException("Pas encore implémenté");
 	}
 
 	public void setSecteur(String secteur) {
 // TODO: Implémenter cette méthode
-            if (secteur = String) {
-                this.secteur = secteur;
-            }
-            else {
-		throw new UnsupportedOperationException("Pas encore implémenté");
+                this.secteur = secteur.ZoneGeographique;
+            
 	}
 
 	/**
@@ -74,11 +70,11 @@ public class Representant {
 		}
 // TODO: Implémenter cette méthode
                 else {
+                    return montant(this.mois);
                     float chiffreAnnuel = montant*mois;
                 }
                     return ("le CA = " +chiffreAnnuel+ "!");
                 }
-		throw new UnsupportedOperationException("Pas encore implémenté");
 	}
 
 	/**
