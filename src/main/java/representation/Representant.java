@@ -7,14 +7,14 @@ public class Representant {
 	private final String prenom;
 	private String adresse;
 	private float salaireFixe;
-        private String secteur;
+        private ZoneGeographique secteur;
 	public Representant(int numero, String nom, String prenom, ZoneGeographique secteur) {
 		this.numero = numero;
 		this.nom = nom;
 		this.prenom = prenom;
-                this.secteur = secteur.ZoneGeographique;
+                setSecteur = secteur.ZoneGeographique;
 	}
-
+        private final float [] CAMensuel = new float [12];
 	public int getNumero() {
 		return numero;
 	}
@@ -48,9 +48,12 @@ public class Representant {
                 return secteur ;
 	}
 
-	public void setSecteur(String secteur) {
+	public void setSecteur(ZoneGeographique secteur) {
 // TODO: Implémenter cette méthode
-                this.secteur = secteur.ZoneGeographique;
+                if (null == secteur)
+                    throw new IllegalArgumentException("le secteur doit etre renseigné");
+
+                this.secteur = secteur;
             
 	}
 
@@ -61,7 +64,6 @@ public class Representant {
 	 **/
 	public void enregistrerCA(int mois, float montant) {
 		// vérifier les paramètres
-                float chiffreAnnuel;
 		if (mois < 0 || mois > 11) {
 			throw new IllegalArgumentException("Le mois doit être compris entre 0 et 11");
 		}
@@ -69,12 +71,7 @@ public class Representant {
 			throw new IllegalArgumentException("Le montant doit être positif ou null");
 		}
 // TODO: Implémenter cette méthode
-                else {
-                    return montant(this.mois);
-                    float chiffreAnnuel = montant*mois;
-                }
-                    return ("le CA = " +chiffreAnnuel+ "!");
-                }
+                CAMensuel[mois] = montant;
 	}
 
 	/**
@@ -87,7 +84,8 @@ public class Representant {
 // TODO: Implémenter cette méthode
 		throw new UnsupportedOperationException("Pas encore implémenté");
 	}
-
+        float result = salaireFixe[];
+        result += CAMensuel[mois]
 	@Override
 	public String toString() {
 		return "Representant{" + "numero=" + numero + ", nom=" + nom + ", prenom=" + prenom + '}';
