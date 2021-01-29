@@ -83,7 +83,7 @@ public class Representant {
 	 * @param pourcentage le pourcentage (>= 0 ) à appliquer sur le CA réalisé pour ce mois
 	 * @return le salaire pour ce mois, tenant compte du salaire fixe, de l'indemnité repas, et du pourcentage sur CA
 	 */
-	public enum salaireMensuel(int mois, float pourcentage) {
+	public salaireMensuel(int mois, float pourcentage) {
 // TODO: Implémenter cette méthode
 		throw new UnsupportedOperationException("Pas encore implémenté");
 	}
