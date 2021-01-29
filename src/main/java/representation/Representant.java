@@ -43,12 +43,14 @@ public class Representant {
 	}
 
 	public ZoneGeographique getSecteur() {
-		// TODO: Implémenter cette méthode
+// TODO: Implémenter cette méthode
+                
+                return String(zoneGeographique); 
 		throw new UnsupportedOperationException("Pas encore implémenté");
 	}
 
 	public void setSecteur(ZoneGeographique secteur) {
-		// TODO: Implémenter cette méthode
+// TODO: Implémenter cette méthode
 		throw new UnsupportedOperationException("Pas encore implémenté");
 	}
 
@@ -65,7 +67,7 @@ public class Representant {
 		if (montant < 0) {
 			throw new IllegalArgumentException("Le montant doit être positif ou null");
 		}
-		// TODO: Implémenter cette méthode
+// TODO: Implémenter cette méthode
 		throw new UnsupportedOperationException("Pas encore implémenté");
 	}
 
@@ -76,7 +78,7 @@ public class Representant {
 	 * @return le salaire pour ce mois, tenant compte du salaire fixe, de l'indemnité repas, et du pourcentage sur CA
 	 */
 	public float salaireMensuel(int mois, float pourcentage) {
-		// TODO: Implémenter cette méthode
+// TODO: Implémenter cette méthode
 		throw new UnsupportedOperationException("Pas encore implémenté");
 	}
 
