@@ -7,11 +7,12 @@ public class Representant {
 	private final String prenom;
 	private String adresse;
 	private float salaireFixe;
-
-	public Representant(int numero, String nom, String prenom, ZoneGeographique secteur) {
+        private String secteur;
+	public Representant(int numero, String nom, String prenom, String secteur) {
 		this.numero = numero;
 		this.nom = nom;
 		this.prenom = prenom;
+                this.secteur = secteur;
 	}
 
 	public int getNumero() {
@@ -42,15 +43,18 @@ public class Representant {
 		this.salaireFixe = salaireFixe;
 	}
 
-	public ZoneGeographique getSecteur() {
+	public String getSecteur() {
 // TODO: Implémenter cette méthode
-                
-                return String(zoneGeographique); 
+                return secteur ;
 		throw new UnsupportedOperationException("Pas encore implémenté");
 	}
 
-	public void setSecteur(ZoneGeographique secteur) {
+	public void setSecteur(String secteur) {
 // TODO: Implémenter cette méthode
+            if (secteur = String) {
+                this.secteur = secteur;
+            }
+            else {
 		throw new UnsupportedOperationException("Pas encore implémenté");
 	}
 
@@ -61,6 +65,7 @@ public class Representant {
 	 **/
 	public void enregistrerCA(int mois, float montant) {
 		// vérifier les paramètres
+                float chiffreAnnuel;
 		if (mois < 0 || mois > 11) {
 			throw new IllegalArgumentException("Le mois doit être compris entre 0 et 11");
 		}
@@ -68,6 +73,11 @@ public class Representant {
 			throw new IllegalArgumentException("Le montant doit être positif ou null");
 		}
 // TODO: Implémenter cette méthode
+                else {
+                    float chiffreAnnuel = montant*mois;
+                }
+                    return ("le CA = " +chiffreAnnuel+ "!");
+                }
 		throw new UnsupportedOperationException("Pas encore implémenté");
 	}
 
@@ -77,7 +87,7 @@ public class Representant {
 	 * @param pourcentage le pourcentage (>= 0 ) à appliquer sur le CA réalisé pour ce mois
 	 * @return le salaire pour ce mois, tenant compte du salaire fixe, de l'indemnité repas, et du pourcentage sur CA
 	 */
-	public float salaireMensuel(int mois, float pourcentage) {
+	public enum salaireMensuel(int mois, float pourcentage) {
 // TODO: Implémenter cette méthode
 		throw new UnsupportedOperationException("Pas encore implémenté");
 	}
